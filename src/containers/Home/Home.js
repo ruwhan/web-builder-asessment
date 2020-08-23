@@ -5,7 +5,7 @@ import { loadSavedPages, navigateToBuildPages } from "../../actions";
 
 import "./Home.css";
 import logo from '../../logo.svg';
-import { mapSavedPages } from "../../utils";
+import { generateRandomId, mapSavedPages } from "../../utils";
 
 export class Home extends React.Component {
   constructor(props) {
@@ -30,15 +30,6 @@ export class Home extends React.Component {
   handleClickId = (id, e) => {
     e.preventDefault();
     this.navigateToBuildPages(id);
-  }
-
-  /**
-   * Generate random id when user click `create new`.
-   * 
-   * @returns {String}
-   */
-  generateRandomId() {
-    return Math.round(new Date().getTime() * Math.random()).toString();
   }
 
   /**
@@ -77,9 +68,9 @@ export class Home extends React.Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Scroll down to see your pages, saved pages or create new pages.
+            Hover cursor to the most left side of the screen to see your pages, saved pages or create new pages.
           </p>
-          <a href="/build" className="App-link" onClick={(e) => this.handleClickId(this.generateRandomId(), e)}>Create New</a>
+          <a href="/build" className="App-link" onClick={(e) => this.handleClickId(generateRandomId(), e)}>Create New</a>
         </header>
         { this.renderSavedPages() }
       </div>

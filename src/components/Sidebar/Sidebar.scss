@@ -1,0 +1,48 @@
+.sidebar {
+  position: absolute;
+  background-color: #EEE;
+  color: #333;
+  height: 100vh;
+  width: 240px;
+  left: -232px;
+  z-index: 9;
+  transition: all .33s;
+
+  .back-link {
+    margin: 16px;
+    text-decoration: none;
+    opacity: .66;
+  }
+
+  &:hover {
+    left: 0;
+  }
+
+  &>ul {
+    margin-block-start: 0;
+    margin-inline-start: 0;
+    padding-inline-start: 0;
+    
+    &> li {
+      font-weight: 600;
+      list-style: none;
+      padding: 16px;
+      transition: all .33s;
+      border-bottom: 1px solid #DDD;
+
+      &:hover {
+        transform: translate(2px, 2px);
+      }
+
+      a {
+        text-decoration: none;
+        color: #333;
+
+        &:hover {
+          opacity: .66;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
