@@ -1,0 +1,7 @@
+export const SAVED_PAGES_LOADING = 'SAVED_PAGES_LOADING';
+export const SAVED_PAGES_LOAD_SUCCESS = 'SAVED_PAGES_LOAD_SUCCESS';
+export const SAVED_PAGES_LOAD_FAIL = 'SAVED_PAGES_LOAD_FAIL';
+
+// export const PAGE_BUILT_LOADING = '';
+// export const PAGE_BUILT_LOAD_SUCCESS = '';
+// export const PAGE_BUILT_LOAD_FAIL = '';
